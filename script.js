@@ -18,12 +18,13 @@ function numAleatorio() {
 
 function sortear() {
     numbers = []
-    let n1 = setInterval(dezena1, 110)
-    let n2 = setInterval(dezena2, 110)
-    let n3 = setInterval(dezena3, 110)
-    let n4 = setInterval(dezena4, 110)
-    let n5 = setInterval(dezena5, 110)
-    let n6 = setInterval(dezena6, 110)
+    btnsortear.disabled = true
+    let n1 = setInterval(dezena1, 200)
+    let n2 = setInterval(dezena2, 200)
+    let n3 = setInterval(dezena3, 200)
+    let n4 = setInterval(dezena4, 200)
+    let n5 = setInterval(dezena5, 200)
+    let n6 = setInterval(dezena6, 200)
 
     setTimeout(() => {
         clearInterval(n1)
@@ -48,6 +49,7 @@ function sortear() {
     setTimeout(() => {
         clearInterval(n6)
         numbers.push(Number(num6.innerText))
+        btnsortear.disabled = false
     }, 12310);
 }
 
